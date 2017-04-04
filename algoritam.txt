@@ -21,7 +21,7 @@ Zadatak 1.
 9.	Odnos protoka Qdi/Q = (Rd/0.25)^0.625)*(Ad/A)
 10.	Izračunaj deltaQi+1 =| Qdi/Q - Qd/Q|
 11.	Ako je deltaQ < 0.0001 ako je, onda je hi = h (rezultat), GOTOVO
-12.	Ako je deltaQ 
+12.	Ako nije onda je hi+1 = hi + 0.008868, idi na 3.
  
 Zadatak 2.
 1.	Ulazni podaci su: visina punog profila == promjer cijevi D [mm], protok punog profila Q l/s i visina djelomično ispunjenog profila h mm. Odredi:h/D

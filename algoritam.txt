@@ -19,7 +19,8 @@ Zadatak 1.
 7.	Odnos Ad/A = (Ad/0.25)/PI
 8.	Odnos brzina vd/v = (Rd/(0.25))^0.625
 9.	Odnos protoka Qd/Q = (Rd/0.25)^0.625)*(Ad/A)
-10.	Pretpostavi novi h: za dobiveni Qd < od zadanog Qd treba h povećati, za obratno ga treba smanjiti
+10.	Pretpostavi novi h: za dobiveni Qd < od zadanog Qd treba h povećati, za obratno ga treba smanjiti:
+	
 11. 	Točnost itracija mora dostići 4 decimale
  
 Zadatak 2.

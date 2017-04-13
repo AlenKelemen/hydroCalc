@@ -9,19 +9,14 @@ D - dubina vode kod potpunog ispunjenja == promjer presjeka cijevi, [m].
  
 Zadatak 1.
 1.	Ulazni podaci su: visina punog profila == promjer cijevi D [mm], protok punog profila Q l/s i računski protok Qd l/s
-2.	Iterativni proračun: inicijalno hi = 0.02277
-3.	Duljina tetive: t = 2*((hi/D-hi/D^2)^0.5)
-4.	Duljina luka (radijani) 
-		za hi < 0.5*D: l = =ASIN(t);
-		za hi > 0.5 *D: l = 2*ASIN(D)-ASIN(t)
-5.	Površina segmenta: Ad=l*0.5-(t*(0.5-hi/d))/2
-6.	hidraulički radijus kod djelomičnog ispunjenja Rd =  Ad/l
-7.	Odnos Ad/A = (Ad/0.25)/PI
-8.	Odnos brzina vd/v = (Rd/(0.25))^0.625
-9.	Odnos protoka Qdi/Q = (Rd/0.25)^0.625)*(Ad/A)
-10.	Izračunaj deltaQ =| Qdi/Q - Qd/Q|
-11.	Ako je deltaQ < 0.0001 ako je, onda je hi = h (rezultat), GOTOVO
-12.	Ako nije onda je hi = hi + 0.008868, idi na 3. Napomena: može biti i manji korak
+napomena: u tablicama najmanji hi = 0.02277 a korak hi = hi + 0.008868
+2.	Iterativni proračun: inicijalno hi= D
+3. 	Izračunaj Qd/Q kao u zadatku 2.
+4.	Izračunaj deltaQ = Qdi/Q - Qd/Q
+5.	Ako je |deltaQ| < 0.0001 ako je, onda je hi = h (rezultat), GOTOVO
+6.	Ako je deltaQ < 0 znači da hi treba biti veći, hi+1 = hi + hi/2
+6.	Ako je deltaQ > 0 znači da hi treba biti manji, hi+1 = hi - hi/2
+
 
  
 Zadatak 2.

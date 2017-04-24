@@ -10,7 +10,7 @@ D - dubina vode kod potpunog ispunjenja == promjer presjeka cijevi, [m].
 Zadatak 1.
 1.	Ulazni podaci su: visina punog profila == promjer cijevi D [mm], protok punog profila Q l/s i računski protok Qd l/s
 2.	Iterativni proračun: inicijalno hi= D
-3. 	Izračunaj Qd/Q kao u zadatku 2.
+3. 	Izračunaj Qdi/Q kao u zadatku 2.
 4.	Izračunaj deltaQ = Qdi/Q - Qd/Q
 5.	Ako je |deltaQ| < 0.0001 ako je, onda je hi = h (rezultat), GOTOVO
 6.	Ako je deltaQ < 0 znači da hi treba biti veći, hi+1 = hi + hi/2

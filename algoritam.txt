@@ -15,7 +15,7 @@ Zadatak 1.
 5.	Ako je |deltaQ| < 0.0001 ako je, onda je hi = h (rezultat), GOTOVO
 6.	Ako je deltaQ < 0 znači da hi treba biti veći, hi+1 = hi + hi/2
 7.	Ako je deltaQ > 0 znači da hi treba biti manji, hi+1 = hi - hi/2
-8.	hi = hi+1, idi na 3.
+8.	hi = hi+1, Qdi/Q je sada Qd/Q: idi na 3.
 
 
  

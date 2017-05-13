@@ -46,12 +46,15 @@ ti = 2*((h/D-(h/D)^2)^0.5) = 2*((0.75-(0.75)^2)^0.5) = 0.8660
 Qdi/Q = 0.9048
 deltaQ = Qdi/Q - Qd/Q = 0.9048 - 117/468 = 0.6548
 deltaQ > 0: hi+1 = hi - hi/2 = 375 - 375/2 = 187.5, hi/D = 187.5/500 = 0.375
-....
+ti = 2*((h/D-(h/D)^2)^0.5) = 2*((0.375-(0.375)^2)^0.5) = 0.968245837
+za h <= 0.5*D: l=ASIN(t); li = ASIN(0.968245837) =1.318116073
+Adi=(li*0.5-(ti*(0.5-hi/D)))/2 =(1.318116073*0.5-(1*(0.5-0.375)))/2 = 0.267029018
+Rdi = Adi/li= 0.267029018/1.318116073 = 0.202583842
+Adi/A = (Ad/0.25)/PI = 0.267029018/0.25/PI = 0.339991905
+vdi/v = (0.202583842/(0.25))^0.625 =0.876830194
+Qdi/Q = vd/v * (Ad/A) =0.876830194 * 0.339991905 =0.298115168
+deltaQ = Qdi/Q - Qd/Q =0.298115168-117/468 = 0.048115168
 
-
-
-
- 
 Zadatak 2.
 1.	Ulazni podaci su: visina punog profila == promjer cijevi D [mm], protok punog profila Q l/s i visina djelomično ispunjenog profila h mm. Odredi:h/D
 2. 	Za područje 0.8273 < h/D < 0.9999 ne daju rezultati pa samo napravi obavijest

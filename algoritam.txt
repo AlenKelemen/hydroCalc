@@ -20,7 +20,7 @@ Zadatak 1.
 
  
 Zadatak 2.
-1.	Ulazni podaci su: visina punog profila == promjer cijevi D [mm], protok punog profila Q l/s i visina djelomično ispunjenog 	profila h mm. Odredi:h/D
+1.	Ulazni podaci su: visina punog profila == promjer cijevi D [mm], protok punog profila Q l/s i visina djelomično ispunjenog profila h mm. Odredi:h/D
 2. 	Za područje 0.8273 < h/D < 0.9999 ne daju rezultati pa samo napravi obavijest
 3.	Duljina tetive: t = 2*((h/D-(h/D)^2)^0.5)
 4.	Duljina luka (radijani) 

@@ -17,6 +17,39 @@ Zadatak 1.
 7.	Ako je deltaQ > 0 znači da hi treba biti manji, hi+1 = hi - hi/2
 8.	hi = hi+1, Qdi/Q je sada Qd/Q: idi na 3.
 
+primjer zadatka 1:
+Zadano: D =500 mm, Q = 468 l/s, Qd =117 l/s
+
+hi = 500 mm, hi/D = 1
+ti = 2*((h/D-(h/D)^2)^0.5) = 2*((1-(1)^2)^0.5) = 0
+za h > 0.5 *D: li = PI-ASIN(t)= PI
+Adi=(li*0.5-(ti*(0.5-hi/D)))/2 =(PI*0.5-(0*(0.5-1)))/2 = PI*0.5/2 = PI/4 = 0.785398163
+Rdi = Adi/li= PI/4/PI =1/4 = 0.25
+Adi/A = (Ad/0.25)/PI = PI/4/4/PI = 1
+vdi/v = (Rd/(0.25))^0.625 = (1/4/1/4)^0.625 = 1
+Qdi/Q = (Rd/0.25)^0.625*(Ad/A)= 1* 1 = 1
+deltaQ = Qdi/Q - Qd/Q = 1 - 117/468 = 0.75
+
+deltaQ > 0: hi+1 = hi - hi/2 = 500 - 500/2 = 250 mm, hi/D = 250/500 = 0.5
+ti = 2*((h/D-(h/D)^2)^0.5) = 2*((0.5-(0.5)^2)^0.5) = 1
+za h <= 0.5*D: l=ASIN(t); li = ASIN(1) =PI/2
+Adi=(li*0.5-(ti*(0.5-hi/D)))/2 =(PI/2*0.5-(1*(0.5-0.5)))/2 = PI/2*1/2/2 = PI/8 = 0.392699082
+Rdi = Adi/li= PI/8/PI/2 = 1/4
+Adi/A = (Ad/0.25)/PI = PI/8/1/4/PI = 0.5
+vdi/v = (Rd/(0.25))^0.625 = (1/4/1/4)^0.625 = 1
+Qdi/Q = vd/v * (Ad/A) = 1*0.5 = 0.5
+deltaQ = Qdi/Q - Qd/Q = 0.5/468 - 117/468 = -0.248931624
+
+deltaQ < 0: hi+1 = hi + hi/2 = 250 + 250/2 = 375, hi/D = 375/500 = 0.75
+ti = 2*((h/D-(h/D)^2)^0.5) = 2*((0.75-(0.75)^2)^0.5) = 0.8660
+....
+Qdi/Q = 0.9048
+deltaQ = Qdi/Q - Qd/Q = 0.9048 - 117/468 = 0.6548
+deltaQ > 0: hi+1 = hi - hi/2 = 375 - 375/2 = 187.5, hi/D = 187.5/500 = 0.375
+....
+
+
+
 
  
 Zadatak 2.
@@ -24,16 +57,20 @@ Zadatak 2.
 2. 	Za područje 0.8273 < h/D < 0.9999 ne daju rezultati pa samo napravi obavijest
 3.	Duljina tetive: t = 2*((h/D-(h/D)^2)^0.5)
 4.	Duljina luka (radijani) 
-		za h < 0.5*D: l = =ASIN(t); 
+		za h <= 0.5*D: l = =ASIN(t); 
 		za h > 0.5 *D: l = PI-ASIN(t)
 5.	Površina segmenta: Ad=(l*0.5-(t*(0.5-h/D)))/2
 6.	Hidraulički radijus kod djelomičnog ispunjenja Rd =  Ad/l
 7.	Odnos Ad/A = (Ad/0.25)/PI
 8.	Odnos brzina vd/v = (Rd/(0.25))^0.625
-9.	Odnos protoka Qd/Q = (Rd/0.25)^0.625*(Ad/A)
+9.	Odnos protoka Qd/Q = (Rd/0.25)^0.625*(Ad/A) = vd/v * (Ad/A)
 
 napomena: u tablicama najmanji hi = 0.02277 a korak hi = hi + 0.008868
-primjer:
+
+
+
+
+primjer zadatka 2:
 Zadano: D =500 mm, Q = 468 l/s, h =400 mm
 h/D = 400/500 = 0.8
 h/D < 0.8273, test je OK

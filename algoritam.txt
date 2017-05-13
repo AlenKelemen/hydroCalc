@@ -12,7 +12,7 @@ Zadatak 1.
 2.	Iterativni proračun: inicijalno hi= D
 3. 	Izračunaj Qdi/Q kao u zadatku 2.
 4.	Izračunaj deltaQ = Qdi/Q - Qd/Q
-5.	Ako je |deltaQ| < 0.0001 ako je, onda je hi = h (rezultat), GOTOVO
+5.	Ako je |deltaQ| < 0.000001 ako je, onda je hi = h (rezultat), GOTOVO
 6.	Ako je deltaQ < 0 znači da hi treba biti veći, hi+1 = hi + hi/2
 7.	Ako je deltaQ > 0 znači da hi treba biti manji, hi+1 = hi - hi/2
 8.	hi = hi+1, Qdi/Q je sada Qd/Q: idi na 3.
@@ -25,11 +25,30 @@ Zadatak 2.
 3.	Duljina tetive: t = 2*((h/D-(h/D)^2)^0.5)
 4.	Duljina luka (radijani) 
 		za h < 0.5*D: l = =ASIN(t); 
-		za h > 0.5 *D: l = 2*ASIN(D)-ASIN(t)
-5.	Površina segmenta: Ad=l*0.5-(t*(0.5-h/D))/2
+		za h > 0.5 *D: l = PI-ASIN(t)
+5.	Površina segmenta: Ad=(l*0.5-(t*(0.5-h/D)))/2
 6.	Hidraulički radijus kod djelomičnog ispunjenja Rd =  Ad/l
 7.	Odnos Ad/A = (Ad/0.25)/PI
 8.	Odnos brzina vd/v = (Rd/(0.25))^0.625
-9.	Odnos protoka Qd/Q = (Rd/0.25)^0.625)*(Ad/A)
+9.	Odnos protoka Qd/Q = (Rd/0.25)^0.625*(Ad/A)
 
 napomena: u tablicama najmanji hi = 0.02277 a korak hi = hi + 0.008868
+primjer:
+Zadano: D =500 mm, Q = 468 l/s, h =400 mm
+h/D = 400/500 = 0.8
+h/D < 0.8273, test je OK
+t = 2*((h/D-(h/D)^2)^0.5) = 2*((0.8-(0.8)^2)^0.5) = 0.8
+za h > 0.5 *D (400 > 0.5*500): l = PI-ASIN(t) = PI - ASIN(0.8)= 2.214297436
+Površina segmenta: Ad=l*0.5-(t*(0.5-h/D))/2 = (2.214297436 * 0.5 - (0.8 * (0.5 - 0.8)))/2 = 0.673574359
+Hidraulički radijus kod djelomičnog ispunjenja Rd =  Ad/l = 0.673574359/2.214297436 = 0.304193262
+Odnos Ad/A = (Ad/0.25)/PI = (0.673574359/0.25)/PI = 0.85762151
+Odnos brzina vd/v = (Rd/(0.25))^0.625 = (0.304193262/(0.25))^0.625 = 1.130462052
+Odnos protoka Qd/Q = (Rd/0.25)^0.625)*(Ad/A) = (0.304193262/0.25)^0.625*0.85762151 = 0.969508572
+
+
+
+
+
+
+
+

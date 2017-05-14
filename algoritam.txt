@@ -38,7 +38,7 @@ Rdi = Adi/li= PI/8/PI/2 = 1/4
 Adi/A = (Ad/0.25)/PI = PI/8/1/4/PI = 0.5
 vdi/v = (Rd/(0.25))^0.625 = (1/4/1/4)^0.625 = 1
 Qdi/Q = vd/v * (Ad/A) = 1*0.5 = 0.5
-deltaQ = Qdi/Q - Qd/Q = 0.5/468 - 117/468 = -0.248931624
+deltaQ = Qdi/Q - Qd/Q = 0.5 - 117/468 = 0.25
 
 deltaQ < 0: hi+1 = hi + hi/2 = 250 + 250/2 = 375, hi/D = 375/500 = 0.75
 ti = 2*((h/D-(h/D)^2)^0.5) = 2*((0.75-(0.75)^2)^0.5) = 0.8660
@@ -54,6 +54,10 @@ Adi/A = (Ad/0.25)/PI = 0.267029018/0.25/PI = 0.339991905
 vdi/v = (0.202583842/(0.25))^0.625 =0.876830194
 Qdi/Q = vd/v * (Ad/A) =0.876830194 * 0.339991905 =0.298115168
 deltaQ = Qdi/Q - Qd/Q =0.298115168-117/468 = 0.048115168
+....
+deltaQ > 0, hi+1 = hi - hi/2 = 187.5 - 187.5/2 = 
+
+
 
 Zadatak 2.
 1.	Ulazni podaci su: visina punog profila == promjer cijevi D [mm], protok punog profila Q l/s i visina djelomično ispunjenog profila h mm. Odredi:h/D
